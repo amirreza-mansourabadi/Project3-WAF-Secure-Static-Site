@@ -27,57 +27,57 @@ This project demonstrates securing a static website hosted on CloudFront using A
 
 ## Screenshots
 
-### 01 - WAF Intro  
-![01-waf-intro](screenshots/01-waf-intro.png)  
-AWS WAF console landing page showing an overview of Web ACLs, rules, and managed rule groups.  
+### 01 - S3 Bucket Private  
+![1-s3-bucket-private](screenshots/1-s3-bucket-private.png)  
+Shows the S3 bucket configured as private for hosting the static website.  
 
-### 02 - Web ACL List  
-![02-webacl-list](screenshots/02-webacl-list.png)  
-List of Web ACLs in the account. `Project3-WebACL-2` is highlighted as the active Web ACL.  
+### 02 - Index Uploaded  
+![2-index-uploaded](screenshots/2-index-uploaded.png)  
+Confirms the `index.html` file was uploaded to the S3 bucket.  
 
-### 03 - BlockMyIP Rule  
-![03-blockmyip-rule](screenshots/03-blockmyip-rule.png)  
-Custom IP block rule to prevent a specific IP from accessing the website.  
+### 03 - Access Denied  
+![3-access-denied](screenshots/3-access-denied.png)  
+Demonstrates that direct access to the private S3 bucket is blocked.  
 
-### 04 - WAF Rule Builder  
-![04-rule-builder](screenshots/04-rule-builder.png)  
-Rule builder interface for defining statements such as IP sets, headers, or query string inspection.  
+### 04 - Nginx Running  
+![4-nginx-running](screenshots/4-nginx-running.png)  
+Shows the Nginx server running locally (for testing before CloudFront).  
 
-### 05 - WAF Rule JSON Editor  
-![05-rule-json](screenshots/05-rule-json.png)  
-Editing complex rule logic using the JSON editor for nested statements.  
+### 05 - Nginx Default Page  
+![5-nginx-default-page](screenshots/5-nginx-default-page.png)  
+Displays the default Nginx page served successfully.  
 
-### 06 - WAF IP Set Creation  
-![06-ipset](screenshots/06-ipset.png)  
-Creation of an IP set referenced in the custom block rule.  
+### 06 - S3 Private Access Denied  
+![6-s3-private-access-denied](screenshots/6-s3-private-access-denied.png)  
+Confirms that trying to access S3 files without CloudFront fails.  
 
-### 07 - WAF Managed Rules  
-![07-managed-rules](screenshots/07-managed-rules.png)  
-AWS managed rule groups added to the Web ACL to protect against bots, bad inputs, and IP reputation threats.  
+### 07 - CloudFront Updated Page  
+![7-cloudfront-updated-page](screenshots/7-cloudfront-updated-page.png)  
+Shows the CloudFront distribution serving the static website.  
 
-### 08 - Web ACL Basic Setup  
-![08-webacl-setup](screenshots/08-webacl-setup.png)  
-Overview of Web ACL settings, rule priorities, and actions before enabling logging.  
+### 08 - WAF Web ACL Basic Setup  
+![8-waf-webacl-basic-setup](screenshots/8-waf-webacl-basic-setup.png)  
+Overview of the Web ACL settings, priorities, and rules before enabling logging.  
 
-### 09 - Active Rules  
-![09-active-rules](screenshots/09-active-rules.png)  
-List of active rules in `Project3-WebACL-2` with priorities and actions.  
+### 09 - Web ACL Active Rules  
+![9-webacl-active-rules](screenshots/9-webacl-active-rules.png)  
+Lists active rules in `Project3-WebACL-2` with priorities and actions.  
 
 ### 10 - WAF Access Denied  
-![10-access-denied](screenshots/10-access-denied.png)  
-Shows access denied when attempting to view a resource blocked by WAF.  
+![10-waf-access-denied](screenshots/10-waf-access-denied.png)  
+Shows a blocked request being denied by WAF.  
 
-### 11 - Firehose Logging Enabled  
-![11-firehose-logging](screenshots/11-firehose-logging.png)  
-Logging enabled via Amazon Data Firehose stream `aws-waf-logs-Project3` for monitoring requests.  
+### 11 - WAF Logging Active  
+![11-waf-logging-active](screenshots/11-waf-logging-active.png)  
+Demonstrates logging enabled via the Firehose stream for monitoring requests.  
 
-### 12 - WAF Block Test (403)  
+### 12 - WAF Block Test  
 ![12-waf-block-test](screenshots/12-waf-block-test.png)  
-`curl` test confirming requests from blocked IPs return HTTP `403`.  
+Command-line `curl` test showing requests from blocked IPs return HTTP `403`.  
 
-### 13 - Sampled Requests / Logs  
-![13-sampled-requests](screenshots/13-sampled-requests.png)  
-WAF sampled requests interface showing requests matching rules for verification.  
+### 13 - WAF Rule Enabled CloudFront  
+![13-waf-rule-enabled-cloudfront](screenshots/13-waf-rule-enabled-cloudfront.png)  
+Confirms the custom WAF rule is enabled and associated with the CloudFront distribution.  
 
 ## Notes
 
@@ -91,17 +91,17 @@ WAF sampled requests interface showing requests matching rules for verification.
 ```text
 Project3-WAF-Secure-Static-Site/
 ├── screenshots/
-│   ├── 01-waf-intro.png
-│   ├── 02-webacl-list.png
-│   ├── 03-blockmyip-rule.png
-│   ├── 04-rule-builder.png
-│   ├── 05-rule-json.png
-│   ├── 06-ipset.png
-│   ├── 07-managed-rules.png
-│   ├── 08-webacl-setup.png
-│   ├── 09-active-rules.png
-│   ├── 10-access-denied.png
-│   ├── 11-firehose-logging.png
+│   ├── 1-s3-bucket-private.png
+│   ├── 2-index-uploaded.png
+│   ├── 3-access-denied.png
+│   ├── 4-nginx-running.png
+│   ├── 5-nginx-default-page.png
+│   ├── 6-s3-private-access-denied.png
+│   ├── 7-cloudfront-updated-page.png
+│   ├── 8-waf-webacl-basic-setup.png
+│   ├── 9-webacl-active-rules.png
+│   ├── 10-waf-access-denied.png
+│   ├── 11-waf-logging-active.png
 │   ├── 12-waf-block-test.png
-│   └── 13-sampled-requests.png
+│   └── 13-waf-rule-enabled-cloudfront.png
 └── README.md
