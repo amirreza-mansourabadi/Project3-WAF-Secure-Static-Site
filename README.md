@@ -109,7 +109,7 @@ Shows the BlockMyCurrentIP rule active and associated with the CloudFront distri
 
 - Some sampled requests may take a few minutes to appear in WAF.
 - Logging is enabled via Firehose stream `aws-waf-logs-Project3`.
-- CloudFront distribution: `<your distribution ID>`
+- CloudFront distribution: Created and associated with WAF Web ACL (ID hidden for security)
 - Testing via `curl` confirmed blocked IP returns `403`.
 
 ---
