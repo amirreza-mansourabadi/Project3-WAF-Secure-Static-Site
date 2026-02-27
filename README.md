@@ -28,55 +28,55 @@ This project demonstrates securing a static website hosted on CloudFront using A
 ## Screenshots
 
 ### 01 - WAF Intro
-![01 - WAF Intro](screenshots/01-waf-intro.png?raw=true)  
+![01 - WAF Intro](screenshots/01-waf-intro.png)  
 AWS WAF console landing page showing an overview of Web ACLs, rules, and managed rule groups.
 
 ### 02 - Web ACL List
-![02 - Web ACL List](screenshots/02-webacl-list.png?raw=true)  
+![02 - Web ACL List](screenshots/02-webacl-list.png)  
 List of Web ACLs in the account. `Project3-WebACL-2` is highlighted as the active Web ACL.
 
 ### 03 - BlockMyIP Rule
-![03 - BlockMyIP Rule](screenshots/03-blockmyip-rule.png?raw=true)  
+![03 - BlockMyIP Rule](screenshots/03-blockmyip-rule.png)  
 Custom IP block rule to prevent a specific IP from accessing the website.
 
 ### 04 - WAF Rule Builder
-![04 - WAF Rule Builder](screenshots/04-rule-builder.png?raw=true)  
+![04 - WAF Rule Builder](screenshots/04-rule-builder.png)  
 Rule builder interface for defining statements such as IP sets, headers, or query string inspection.
 
 ### 05 - WAF Rule JSON Editor
-![05 - WAF Rule JSON Editor](screenshots/05-rule-json.png?raw=true)  
+![05 - WAF Rule JSON Editor](screenshots/05-rule-json.png)  
 Editing complex rule logic using the JSON editor for nested statements.
 
 ### 06 - WAF IP Set Creation
-![06 - WAF IP Set Creation](screenshots/06-ipset.png?raw=true)  
+![06 - WAF IP Set Creation](screenshots/06-ipset.png)  
 Creation of an IP set referenced in the custom block rule.
 
 ### 07 - WAF Managed Rules
-![07 - WAF Managed Rules](screenshots/07-managed-rules.png?raw=true)  
+![07 - WAF Managed Rules](screenshots/07-managed-rules.png)  
 AWS managed rule groups added to the Web ACL to protect against bots, bad inputs, and IP reputation threats.
 
 ### 08 - Web ACL Basic Setup
-![08 - Web ACL Basic Setup](screenshots/08-webacl-setup.png?raw=true)  
+![08 - Web ACL Basic Setup](screenshots/08-webacl-setup.png)  
 Overview of Web ACL settings, rule priorities, and actions before enabling logging.
 
 ### 09 - Active Rules
-![09 - Active Rules](screenshots/09-active-rules.png?raw=true)  
+![09 - Active Rules](screenshots/09-active-rules.png)  
 List of active rules in `Project3-WebACL-2` with priorities and actions.
 
 ### 10 - WAF Access Denied
-![10 - WAF Access Denied](screenshots/10-access-denied.png?raw=true)  
+![10 - WAF Access Denied](screenshots/10-access-denied.png)  
 Shows access denied when attempting to view a resource blocked by WAF.
 
 ### 11 - Firehose Logging Enabled
-![11 - Firehose Logging Enabled](screenshots/11-firehose-logging.png?raw=true)  
+![11 - Firehose Logging Enabled](screenshots/11-firehose-logging.png)  
 Logging enabled via Amazon Data Firehose stream `aws-waf-logs-Project3` for monitoring requests.
 
 ### 12 - WAF Block Test (403)
-![12 - WAF Block Test](screenshots/12-waf-block-test.png?raw=true)  
+![12 - WAF Block Test](screenshots/12-waf-block-test.png)  
 `curl` test confirming requests from blocked IPs return HTTP `403`.
 
 ### 13 - Sampled Requests / Logs
-![13 - Sampled Requests / Logs](screenshots/13-sampled-requests.png?raw=true)  
+![13 - Sampled Requests / Logs](screenshots/13-sampled-requests.png)  
 WAF sampled requests interface showing requests matching rules for verification.
 
 ## Notes
