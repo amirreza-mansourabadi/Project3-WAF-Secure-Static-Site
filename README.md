@@ -33,11 +33,15 @@ This project demonstrates securing a static website hosted on CloudFront using A
 
 Shows the S3 bucket configured with private access.
 
+---
+
 ### 02 - Index Uploaded
 
 ![02-index-uploaded](screenshots/2-index-uploaded.png)  
 
 The `index.html` file uploaded to the private S3 bucket.
+
+---
 
 ### 03 - Access Denied
 
@@ -45,11 +49,15 @@ The `index.html` file uploaded to the private S3 bucket.
 
 Attempting to access the S3 bucket publicly results in Access Denied.
 
+---
+
 ### 04 - Nginx Running
 
 ![04-nginx-running](screenshots/4-nginx-running.png)  
 
 Shows an Nginx server running locally to test access to the site.
+
+---
 
 ### 05 - Nginx Default Page
 
@@ -57,11 +65,15 @@ Shows an Nginx server running locally to test access to the site.
 
 Displays the default Nginx welcome page.
 
+---
+
 ### 06 - S3 Private Access Denied
 
 ![06-s3-private-access-denied](screenshots/6-s3-private-access-denied.png)  
 
 Testing private S3 access to confirm public requests are blocked.
+
+---
 
 ### 07 - CloudFront Updated Page
 
@@ -69,11 +81,15 @@ Testing private S3 access to confirm public requests are blocked.
 
 Shows the static site served via CloudFront.
 
+---
+
 ### 08 - WAF Web ACL Basic Setup
 
 ![08-waf-webacl-basic-setup](screenshots/8-waf-webacl-basic-setup.png)  
 
 Overview of Web ACL settings, priorities, and actions before enabling logging.
+
+---
 
 ### 09 - Web ACL Active Rules
 
@@ -81,11 +97,15 @@ Overview of Web ACL settings, priorities, and actions before enabling logging.
 
 Displays the list of active rules in `Project3-WebACL-2`.
 
+---
+
 ### 10 - WAF Access Denied
 
 ![10-waf-access-denied](screenshots/10-waf-access-denied.png)  
 
 Shows the access denied screen when trying to reach a resource blocked by WAF.
+
+---
 
 ### 11 - WAF Logging Active
 
@@ -93,17 +113,23 @@ Shows the access denied screen when trying to reach a resource blocked by WAF.
 
 Logging enabled via Firehose stream `aws-waf-logs-Project3` for monitoring requests.
 
+---
+
 ### 12 - WAF Block Test
 
 ![12-waf-block-test](screenshots/12-waf-block-test.png)  
 
 `curl` test confirming that requests from blocked IPs return HTTP `403`.
 
+---
+
 ### 13 - WAF Rule Enabled for CloudFront
 
 ![13-waf-rule-enabled-cloudfront](screenshots/13-waf-rule-enabled-cloudfront.png)  
 
 Shows the BlockMyCurrentIP rule active and associated with the CloudFront distribution.
+
+---
 
 ## Notes
 
@@ -115,4 +141,3 @@ Shows the BlockMyCurrentIP rule active and associated with the CloudFront distri
 ## Repository Structure
 
 Project3-WAF-Secure-Static-Site/ ├── screenshots/ │   ├── 1-s3-bucket-private.png │   ├── 2-index-uploaded.png │   ├── 3-access-denied.png │   ├── 4-nginx-running.png │   ├── 5-nginx-default-page.png │   ├── 6-s3-private-access-denied.png │   ├── 7-cloudfront-updated-page.png │   ├── 8-waf-webacl-basic-setup.png │   ├── 9-webacl-active-rules.png │   ├── 10-waf-access-denied.png │   ├── 11-waf-logging-active.png │   ├── 12-waf-block-test.png │   └── 13-waf-rule-enabled-cloudfront.png ├── index.html └── README.md
-
