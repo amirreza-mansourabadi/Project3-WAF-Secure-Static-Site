@@ -2,6 +2,8 @@
 
 This project demonstrates securing a static website hosted on CloudFront using AWS WAF. It includes creating Web ACLs, managed rules, IP blocking, and logging.
 
+---
+
 ## Project Overview
 
 - Host a static website on CloudFront
@@ -10,6 +12,8 @@ This project demonstrates securing a static website hosted on CloudFront using A
 - Block specific IP addresses
 - Enable logging with Amazon Data Firehose
 - Test WAF protection
+
+---
 
 ## Steps Completed
 
@@ -24,6 +28,8 @@ This project demonstrates securing a static website hosted on CloudFront using A
 4. Tested blocked IP requests using `curl`
 5. Verified CloudFront returns `403` for blocked IPs
 6. Took 13 screenshots documenting each step
+
+---
 
 ## Screenshots
 
@@ -79,12 +85,16 @@ Logging enabled via Amazon Data Firehose stream `aws-waf-logs-Project3` for moni
 ![13-sampled-requests](https://github.com/amirreza-mansourabadi/Project3-WAF-Secure-Static-Site/blob/main/screenshots/13-sampled-requests.png?raw=true)  
 WAF sampled requests interface showing requests matching rules for verification.
 
+---
+
 ## Notes
 
 - Sampled requests may take a few minutes to appear in WAF.
 - Logging is enabled via Firehose stream `aws-waf-logs-Project3`.
 - CloudFront distribution: `<your distribution ID>`
 - Testing via `curl` confirmed blocked IP returns `403`.
+
+---
 
 ## Repository Structure
 
